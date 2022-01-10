@@ -1,0 +1,10 @@
+F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\Web\TimesheetManager.Web.Infrastructure\bin\Debug\netstandard2.1\TimesheetManager.Web.Infrastructure.deps.json
+F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\Web\TimesheetManager.Web.Infrastructure\bin\Debug\netstandard2.1\TimesheetManager.Web.Infrastructure.dll
+F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\Web\TimesheetManager.Web.Infrastructure\bin\Debug\netstandard2.1\TimesheetManager.Web.Infrastructure.pdb
+F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\Web\TimesheetManager.Web.Infrastructure\obj\Debug\netstandard2.1\TimesheetManager.Web.Infrastructure.csproj.AssemblyReference.cache
+F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\Web\TimesheetManager.Web.Infrastructure\obj\Debug\netstandard2.1\TimesheetManager.Web.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\Web\TimesheetManager.Web.Infrastructure\obj\Debug\netstandard2.1\TimesheetManager.Web.Infrastructure.AssemblyInfoInputs.cache
+F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\Web\TimesheetManager.Web.Infrastructure\obj\Debug\netstandard2.1\TimesheetManager.Web.Infrastructure.AssemblyInfo.cs
+F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\Web\TimesheetManager.Web.Infrastructure\obj\Debug\netstandard2.1\TimesheetManager.Web.Infrastructure.csproj.CoreCompileInputs.cache
+F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\Web\TimesheetManager.Web.Infrastructure\obj\Debug\netstandard2.1\TimesheetManager.Web.Infrastructure.dll
+F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\Web\TimesheetManager.Web.Infrastructure\obj\Debug\netstandard2.1\TimesheetManager.Web.Infrastructure.pdb

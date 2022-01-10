@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "1HtU2ACi9dNeZxsbY+kmU+NogAZzUeMphXwfra6kwbVTknBP1JrMTZcFAw2+BvHuNxoEdLymx53Pc92ln+AsLg==",
+  "success": true,
+  "projectFilePath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Services\\TimesheetManager.Services\\TimesheetManager.Services.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Stoyan\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.312\\stylecop.analyzers.1.2.0-beta.312.nupkg.sha512",
+    "C:\\Users\\Stoyan\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.312\\stylecop.analyzers.unstable.1.2.0.312.nupkg.sha512"
+  ],
+  "logs": []
+}

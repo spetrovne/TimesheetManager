@@ -1,0 +1,9 @@
+F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\TimesheetManager.Common\bin\Debug\netstandard2.1\TimesheetManager.Common.deps.json
+F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\TimesheetManager.Common\bin\Debug\netstandard2.1\TimesheetManager.Common.dll
+F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\TimesheetManager.Common\bin\Debug\netstandard2.1\TimesheetManager.Common.pdb
+F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\TimesheetManager.Common\obj\Debug\netstandard2.1\TimesheetManager.Common.GeneratedMSBuildEditorConfig.editorconfig
+F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\TimesheetManager.Common\obj\Debug\netstandard2.1\TimesheetManager.Common.AssemblyInfoInputs.cache
+F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\TimesheetManager.Common\obj\Debug\netstandard2.1\TimesheetManager.Common.AssemblyInfo.cs
+F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\TimesheetManager.Common\obj\Debug\netstandard2.1\TimesheetManager.Common.csproj.CoreCompileInputs.cache
+F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\TimesheetManager.Common\obj\Debug\netstandard2.1\TimesheetManager.Common.dll
+F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\TimesheetManager.Common\obj\Debug\netstandard2.1\TimesheetManager.Common.pdb

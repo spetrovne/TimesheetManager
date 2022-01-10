@@ -1,0 +1,580 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Tests\\TimesheetManager.Services.Data.Tests\\TimesheetManager.Services.Data.Tests.csproj": {}
+  },
+  "projects": {
+    "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Data\\TimesheetManager.Data.Common\\TimesheetManager.Data.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Data\\TimesheetManager.Data.Common\\TimesheetManager.Data.Common.csproj",
+        "projectName": "TimesheetManager.Data.Common",
+        "projectPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Data\\TimesheetManager.Data.Common\\TimesheetManager.Data.Common.csproj",
+        "packagesPath": "C:\\Users\\Stoyan\\.nuget\\packages\\",
+        "outputPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Data\\TimesheetManager.Data.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Stoyan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.312, )"
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Data\\TimesheetManager.Data.Models\\TimesheetManager.Data.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Data\\TimesheetManager.Data.Models\\TimesheetManager.Data.Models.csproj",
+        "projectName": "TimesheetManager.Data.Models",
+        "projectPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Data\\TimesheetManager.Data.Models\\TimesheetManager.Data.Models.csproj",
+        "packagesPath": "C:\\Users\\Stoyan\\.nuget\\packages\\",
+        "outputPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Data\\TimesheetManager.Data.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Stoyan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Data\\TimesheetManager.Data.Common\\TimesheetManager.Data.Common.csproj": {
+                "projectPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Data\\TimesheetManager.Data.Common\\TimesheetManager.Data.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.312, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Data\\TimesheetManager.Data\\TimesheetManager.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Data\\TimesheetManager.Data\\TimesheetManager.Data.csproj",
+        "projectName": "TimesheetManager.Data",
+        "projectPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Data\\TimesheetManager.Data\\TimesheetManager.Data.csproj",
+        "packagesPath": "C:\\Users\\Stoyan\\.nuget\\packages\\",
+        "outputPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Data\\TimesheetManager.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Stoyan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Data\\TimesheetManager.Data.Common\\TimesheetManager.Data.Common.csproj": {
+                "projectPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Data\\TimesheetManager.Data.Common\\TimesheetManager.Data.Common.csproj"
+              },
+              "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Data\\TimesheetManager.Data.Models\\TimesheetManager.Data.Models.csproj": {
+                "projectPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Data\\TimesheetManager.Data.Models\\TimesheetManager.Data.Models.csproj"
+              },
+              "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\TimesheetManager.Common\\TimesheetManager.Common.csproj": {
+                "projectPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\TimesheetManager.Common\\TimesheetManager.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.Extensions.Configuration.UserSecrets": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.312, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Services\\TimesheetManager.Services.Data\\TimesheetManager.Services.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Services\\TimesheetManager.Services.Data\\TimesheetManager.Services.Data.csproj",
+        "projectName": "TimesheetManager.Services.Data",
+        "projectPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Services\\TimesheetManager.Services.Data\\TimesheetManager.Services.Data.csproj",
+        "packagesPath": "C:\\Users\\Stoyan\\.nuget\\packages\\",
+        "outputPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Services\\TimesheetManager.Services.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Stoyan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Data\\TimesheetManager.Data.Common\\TimesheetManager.Data.Common.csproj": {
+                "projectPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Data\\TimesheetManager.Data.Common\\TimesheetManager.Data.Common.csproj"
+              },
+              "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Data\\TimesheetManager.Data.Models\\TimesheetManager.Data.Models.csproj": {
+                "projectPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Data\\TimesheetManager.Data.Models\\TimesheetManager.Data.Models.csproj"
+              },
+              "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Services\\TimesheetManager.Services.Mapping\\TimesheetManager.Services.Mapping.csproj": {
+                "projectPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Services\\TimesheetManager.Services.Mapping\\TimesheetManager.Services.Mapping.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.312, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Services\\TimesheetManager.Services.Mapping\\TimesheetManager.Services.Mapping.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Services\\TimesheetManager.Services.Mapping\\TimesheetManager.Services.Mapping.csproj",
+        "projectName": "TimesheetManager.Services.Mapping",
+        "projectPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Services\\TimesheetManager.Services.Mapping\\TimesheetManager.Services.Mapping.csproj",
+        "packagesPath": "C:\\Users\\Stoyan\\.nuget\\packages\\",
+        "outputPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Services\\TimesheetManager.Services.Mapping\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Stoyan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.312, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Tests\\TimesheetManager.Services.Data.Tests\\TimesheetManager.Services.Data.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Tests\\TimesheetManager.Services.Data.Tests\\TimesheetManager.Services.Data.Tests.csproj",
+        "projectName": "TimesheetManager.Services.Data.Tests",
+        "projectPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Tests\\TimesheetManager.Services.Data.Tests\\TimesheetManager.Services.Data.Tests.csproj",
+        "packagesPath": "C:\\Users\\Stoyan\\.nuget\\packages\\",
+        "outputPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Tests\\TimesheetManager.Services.Data.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Stoyan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Data\\TimesheetManager.Data\\TimesheetManager.Data.csproj": {
+                "projectPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Data\\TimesheetManager.Data\\TimesheetManager.Data.csproj"
+              },
+              "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Services\\TimesheetManager.Services.Data\\TimesheetManager.Services.Data.csproj": {
+                "projectPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Services\\TimesheetManager.Services.Data\\TimesheetManager.Services.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.9.4, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.16.1, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.312, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\TimesheetManager.Common\\TimesheetManager.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\TimesheetManager.Common\\TimesheetManager.Common.csproj",
+        "projectName": "TimesheetManager.Common",
+        "projectPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\TimesheetManager.Common\\TimesheetManager.Common.csproj",
+        "packagesPath": "C:\\Users\\Stoyan\\.nuget\\packages\\",
+        "outputPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\TimesheetManager.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Stoyan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.312, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
