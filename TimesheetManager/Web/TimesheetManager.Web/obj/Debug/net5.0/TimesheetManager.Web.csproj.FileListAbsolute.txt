@@ -465,3 +465,7 @@ F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\Web\TimesheetMa
 F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\Web\TimesheetManager.Web\obj\Debug\net5.0\TimesheetManager.Web.genruntimeconfig.cache
 F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\Web\TimesheetManager.Web\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
 F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\Web\TimesheetManager.Web\obj\Debug\net5.0\TimesheetManager.Web.MvcApplicationPartsAssemblyInfo.cs
+F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\Web\TimesheetManager.Web\bin\Debug\net5.0\Microsoft.OpenApi.dll
+F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\Web\TimesheetManager.Web\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\Web\TimesheetManager.Web\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\Web\TimesheetManager.Web\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
