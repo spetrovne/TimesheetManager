@@ -63,7 +63,7 @@
 
         public async Task<Result> UpdateAsync(UpdateProjectViewModel model)
         {
-            var project = await this.projects.All().FirstOrDefaultAsync();
+            var project = await this.projects.All().FirstOrDefaultAsync(p => p.Id == model.Id);
 
             if (project == null)
             {
