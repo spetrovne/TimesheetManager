@@ -1,9 +1,8 @@
 ﻿namespace TimesheetManager.Web.Areas.Administration.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
     using TimesheetManager.Services.Data;
     using TimesheetManager.Web.ViewModels.Administration.Dashboard;
-
-    using Microsoft.AspNetCore.Mvc;
 
     public class DashboardController : AdministrationController
     {

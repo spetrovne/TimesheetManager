@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TVsnVAu2tkP0ot2pN8P3qoGS+N839EMX962sUoYxrcmuDT39ksXou0MEeEfzKj8qcfNJ/Vu+Tgp4lkfjOVmCUQ==",
+  "dgSpecHash": "8eYduqknoylAqgQu5buSBAkN0PBp63vYJBydf3PB9EYuLcitcMlw1imfdxaMgCrQtWYas50qBlXZWryQHc5xaQ==",
   "success": true,
   "projectFilePath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Tests\\TimesheetManager.Web.Tests\\TimesheetManager.Web.Tests.csproj",
   "expectedPackageFiles": [

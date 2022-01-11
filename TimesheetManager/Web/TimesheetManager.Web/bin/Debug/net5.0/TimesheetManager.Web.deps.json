@@ -2179,9 +2179,11 @@
       },
       "TimesheetManager.Services.Data/1.0.0": {
         "dependencies": {
+          "TimesheetManager.Common": "1.0.0",
           "TimesheetManager.Data.Common": "1.0.0",
           "TimesheetManager.Data.Models": "1.0.0",
-          "TimesheetManager.Services.Mapping": "1.0.0"
+          "TimesheetManager.Services.Mapping": "1.0.0",
+          "TimesheetManager.Web.ViewModels": "1.0.0"
         },
         "runtime": {
           "TimesheetManager.Services.Data.dll": {}

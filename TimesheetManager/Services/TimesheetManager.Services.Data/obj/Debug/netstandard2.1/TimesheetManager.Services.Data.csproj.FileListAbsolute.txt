@@ -15,3 +15,7 @@ F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\Services\Timesh
 F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\Services\TimesheetManager.Services.Data\obj\Debug\netstandard2.1\TimesheetManager.Services.Data.csproj.CopyComplete
 F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\Services\TimesheetManager.Services.Data\obj\Debug\netstandard2.1\TimesheetManager.Services.Data.dll
 F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\Services\TimesheetManager.Services.Data\obj\Debug\netstandard2.1\TimesheetManager.Services.Data.pdb
+F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\Services\TimesheetManager.Services.Data\bin\Debug\netstandard2.1\TimesheetManager.Common.dll
+F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\Services\TimesheetManager.Services.Data\bin\Debug\netstandard2.1\TimesheetManager.Web.ViewModels.dll
+F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\Services\TimesheetManager.Services.Data\bin\Debug\netstandard2.1\TimesheetManager.Common.pdb
+F:\MyProjects\TimesheetManager\TimesheetManager\TimesheetManager\Services\TimesheetManager.Services.Data\bin\Debug\netstandard2.1\TimesheetManager.Web.ViewModels.pdb

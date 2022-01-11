@@ -11,6 +11,7 @@
         public Project()
         {
             this.TimesheetProjects = new HashSet<TimesheetProject>();
+            this.Tasks = new HashSet<ProjectTask>();
         }
 
         public string Name { get; set; }

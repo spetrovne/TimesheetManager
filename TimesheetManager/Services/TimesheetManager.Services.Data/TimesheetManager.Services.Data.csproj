@@ -21,6 +21,8 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Data\TimesheetManager.Data.Common\TimesheetManager.Data.Common.csproj" />
     <ProjectReference Include="..\..\Data\TimesheetManager.Data.Models\TimesheetManager.Data.Models.csproj" />
+    <ProjectReference Include="..\..\TimesheetManager.Common\TimesheetManager.Common.csproj" />
+    <ProjectReference Include="..\..\Web\TimesheetManager.Web.ViewModels\TimesheetManager.Web.ViewModels.csproj" />
     <ProjectReference Include="..\TimesheetManager.Services.Mapping\TimesheetManager.Services.Mapping.csproj" />
   </ItemGroup>
 

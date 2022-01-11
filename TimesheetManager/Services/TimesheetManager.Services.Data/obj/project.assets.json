@@ -343,6 +343,16 @@
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
+      "TimesheetManager.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/TimesheetManager.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TimesheetManager.Common.dll": {}
+        }
+      },
       "TimesheetManager.Data.Common/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -381,6 +391,20 @@
         },
         "runtime": {
           "bin/placeholder/TimesheetManager.Services.Mapping.dll": {}
+        }
+      },
+      "TimesheetManager.Web.ViewModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "TimesheetManager.Data.Models": "1.0.0",
+          "TimesheetManager.Services.Mapping": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TimesheetManager.Web.ViewModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TimesheetManager.Web.ViewModels.dll": {}
         }
       }
     }
@@ -1176,6 +1200,11 @@
         "version.txt"
       ]
     },
+    "TimesheetManager.Common/1.0.0": {
+      "type": "project",
+      "path": "../../TimesheetManager.Common/TimesheetManager.Common.csproj",
+      "msbuildProject": "../../TimesheetManager.Common/TimesheetManager.Common.csproj"
+    },
     "TimesheetManager.Data.Common/1.0.0": {
       "type": "project",
       "path": "../../Data/TimesheetManager.Data.Common/TimesheetManager.Data.Common.csproj",
@@ -1190,14 +1219,21 @@
       "type": "project",
       "path": "../TimesheetManager.Services.Mapping/TimesheetManager.Services.Mapping.csproj",
       "msbuildProject": "../TimesheetManager.Services.Mapping/TimesheetManager.Services.Mapping.csproj"
+    },
+    "TimesheetManager.Web.ViewModels/1.0.0": {
+      "type": "project",
+      "path": "../../Web/TimesheetManager.Web.ViewModels/TimesheetManager.Web.ViewModels.csproj",
+      "msbuildProject": "../../Web/TimesheetManager.Web.ViewModels/TimesheetManager.Web.ViewModels.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
       "StyleCop.Analyzers >= 1.2.0-beta.312",
+      "TimesheetManager.Common >= 1.0.0",
       "TimesheetManager.Data.Common >= 1.0.0",
       "TimesheetManager.Data.Models >= 1.0.0",
-      "TimesheetManager.Services.Mapping >= 1.0.0"
+      "TimesheetManager.Services.Mapping >= 1.0.0",
+      "TimesheetManager.Web.ViewModels >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1245,6 +1281,12 @@
             },
             "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Services\\TimesheetManager.Services.Mapping\\TimesheetManager.Services.Mapping.csproj": {
               "projectPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Services\\TimesheetManager.Services.Mapping\\TimesheetManager.Services.Mapping.csproj"
+            },
+            "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\TimesheetManager.Common\\TimesheetManager.Common.csproj": {
+              "projectPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\TimesheetManager.Common\\TimesheetManager.Common.csproj"
+            },
+            "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Web\\TimesheetManager.Web.ViewModels\\TimesheetManager.Web.ViewModels.csproj": {
+              "projectPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Web\\TimesheetManager.Web.ViewModels\\TimesheetManager.Web.ViewModels.csproj"
             }
           }
         }

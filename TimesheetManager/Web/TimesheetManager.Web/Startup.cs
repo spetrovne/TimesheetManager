@@ -2,17 +2,6 @@
 {
     using System.Reflection;
 
-    using TimesheetManager.Data;
-    using TimesheetManager.Data.Common;
-    using TimesheetManager.Data.Common.Repositories;
-    using TimesheetManager.Data.Models;
-    using TimesheetManager.Data.Repositories;
-    using TimesheetManager.Data.Seeding;
-    using TimesheetManager.Services.Data;
-    using TimesheetManager.Services.Mapping;
-    using TimesheetManager.Services.Messaging;
-    using TimesheetManager.Web.ViewModels;
-
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Http;
@@ -21,6 +10,18 @@
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
+    using TimesheetManager.Data;
+    using TimesheetManager.Data.Common;
+    using TimesheetManager.Data.Common.Repositories;
+    using TimesheetManager.Data.Models;
+    using TimesheetManager.Data.Repositories;
+    using TimesheetManager.Data.Seeding;
+    using TimesheetManager.Services.Data;
+    using TimesheetManager.Services.Data.Contracts.Project;
+    using TimesheetManager.Services.Data.Project;
+    using TimesheetManager.Services.Mapping;
+    using TimesheetManager.Services.Messaging;
+    using TimesheetManager.Web.ViewModels;
 
     public class Startup
     {
@@ -49,12 +50,12 @@
                         options.MinimumSameSitePolicy = SameSiteMode.None;
                     });
 
-            services.AddControllersWithViews(
-                options =>
-                    {
-                        options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
-                    }).AddRazorRuntimeCompilation();
-            services.AddRazorPages();
+            //services.AddControllersWithViews(
+            //    options =>
+            //        {
+            //            options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
+            //        }).AddRazorRuntimeCompilation();
+            //services.AddRazorPages();
             services.AddDatabaseDeveloperPageExceptionFilter();
 
             services.AddSingleton(this.configuration);
@@ -67,6 +68,7 @@
             // Application services
             services.AddTransient<IEmailSender, NullMessageSender>();
             services.AddTransient<ISettingsService, SettingsService>();
+            services.AddTransient<IProjectService, ProjectService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

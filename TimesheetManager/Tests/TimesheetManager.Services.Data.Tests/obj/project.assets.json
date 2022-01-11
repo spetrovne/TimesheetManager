@@ -2750,9 +2750,11 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
+          "TimesheetManager.Common": "1.0.0",
           "TimesheetManager.Data.Common": "1.0.0",
           "TimesheetManager.Data.Models": "1.0.0",
-          "TimesheetManager.Services.Mapping": "1.0.0"
+          "TimesheetManager.Services.Mapping": "1.0.0",
+          "TimesheetManager.Web.ViewModels": "1.0.0"
         },
         "compile": {
           "bin/placeholder/TimesheetManager.Services.Data.dll": {}
@@ -2772,6 +2774,20 @@
         },
         "runtime": {
           "bin/placeholder/TimesheetManager.Services.Mapping.dll": {}
+        }
+      },
+      "TimesheetManager.Web.ViewModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "TimesheetManager.Data.Models": "1.0.0",
+          "TimesheetManager.Services.Mapping": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TimesheetManager.Web.ViewModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TimesheetManager.Web.ViewModels.dll": {}
         }
       }
     }
@@ -8967,6 +8983,11 @@
       "type": "project",
       "path": "../../Services/TimesheetManager.Services.Mapping/TimesheetManager.Services.Mapping.csproj",
       "msbuildProject": "../../Services/TimesheetManager.Services.Mapping/TimesheetManager.Services.Mapping.csproj"
+    },
+    "TimesheetManager.Web.ViewModels/1.0.0": {
+      "type": "project",
+      "path": "../../Web/TimesheetManager.Web.ViewModels/TimesheetManager.Web.ViewModels.csproj",
+      "msbuildProject": "../../Web/TimesheetManager.Web.ViewModels/TimesheetManager.Web.ViewModels.csproj"
     }
   },
   "projectFileDependencyGroups": {

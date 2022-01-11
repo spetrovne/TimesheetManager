@@ -10,9 +10,11 @@
       "TimesheetManager.Services.Data/1.0.0": {
         "dependencies": {
           "StyleCop.Analyzers": "1.2.0-beta.312",
+          "TimesheetManager.Common": "1.0.0",
           "TimesheetManager.Data.Common": "1.0.0",
           "TimesheetManager.Data.Models": "1.0.0",
-          "TimesheetManager.Services.Mapping": "1.0.0"
+          "TimesheetManager.Services.Mapping": "1.0.0",
+          "TimesheetManager.Web.ViewModels": "1.0.0"
         },
         "runtime": {
           "TimesheetManager.Services.Data.dll": {}
@@ -314,6 +316,11 @@
           }
         }
       },
+      "TimesheetManager.Common/1.0.0": {
+        "runtime": {
+          "TimesheetManager.Common.dll": {}
+        }
+      },
       "TimesheetManager.Data.Common/1.0.0": {
         "dependencies": {
           "System.ComponentModel.Annotations": "5.0.0"
@@ -337,6 +344,15 @@
         },
         "runtime": {
           "TimesheetManager.Services.Mapping.dll": {}
+        }
+      },
+      "TimesheetManager.Web.ViewModels/1.0.0": {
+        "dependencies": {
+          "TimesheetManager.Data.Models": "1.0.0",
+          "TimesheetManager.Services.Mapping": "1.0.0"
+        },
+        "runtime": {
+          "TimesheetManager.Web.ViewModels.dll": {}
         }
       }
     }
@@ -557,6 +573,11 @@
       "path": "system.runtime.compilerservices.unsafe/5.0.0",
       "hashPath": "system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
     },
+    "TimesheetManager.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "TimesheetManager.Data.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -568,6 +589,11 @@
       "sha512": ""
     },
     "TimesheetManager.Services.Mapping/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TimesheetManager.Web.ViewModels/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

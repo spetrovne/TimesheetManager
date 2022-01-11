@@ -2466,9 +2466,11 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
+          "TimesheetManager.Common": "1.0.0",
           "TimesheetManager.Data.Common": "1.0.0",
           "TimesheetManager.Data.Models": "1.0.0",
-          "TimesheetManager.Services.Mapping": "1.0.0"
+          "TimesheetManager.Services.Mapping": "1.0.0",
+          "TimesheetManager.Web.ViewModels": "1.0.0"
         },
         "compile": {
           "bin/placeholder/TimesheetManager.Services.Data.dll": {}

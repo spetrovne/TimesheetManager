@@ -296,6 +296,12 @@
               },
               "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Services\\TimesheetManager.Services.Mapping\\TimesheetManager.Services.Mapping.csproj": {
                 "projectPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Services\\TimesheetManager.Services.Mapping\\TimesheetManager.Services.Mapping.csproj"
+              },
+              "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\TimesheetManager.Common\\TimesheetManager.Common.csproj": {
+                "projectPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\TimesheetManager.Common\\TimesheetManager.Common.csproj"
+              },
+              "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Web\\TimesheetManager.Web.ViewModels\\TimesheetManager.Web.ViewModels.csproj": {
+                "projectPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Web\\TimesheetManager.Web.ViewModels\\TimesheetManager.Web.ViewModels.csproj"
               }
             }
           }

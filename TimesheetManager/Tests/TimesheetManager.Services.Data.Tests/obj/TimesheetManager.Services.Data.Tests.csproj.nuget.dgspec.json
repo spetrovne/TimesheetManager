@@ -296,6 +296,12 @@
               },
               "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Services\\TimesheetManager.Services.Mapping\\TimesheetManager.Services.Mapping.csproj": {
                 "projectPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Services\\TimesheetManager.Services.Mapping\\TimesheetManager.Services.Mapping.csproj"
+              },
+              "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\TimesheetManager.Common\\TimesheetManager.Common.csproj": {
+                "projectPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\TimesheetManager.Common\\TimesheetManager.Common.csproj"
+              },
+              "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Web\\TimesheetManager.Web.ViewModels\\TimesheetManager.Web.ViewModels.csproj": {
+                "projectPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Web\\TimesheetManager.Web.ViewModels\\TimesheetManager.Web.ViewModels.csproj"
               }
             }
           }
@@ -538,6 +544,82 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.312, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Web\\TimesheetManager.Web.ViewModels\\TimesheetManager.Web.ViewModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Web\\TimesheetManager.Web.ViewModels\\TimesheetManager.Web.ViewModels.csproj",
+        "projectName": "TimesheetManager.Web.ViewModels",
+        "projectPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Web\\TimesheetManager.Web.ViewModels\\TimesheetManager.Web.ViewModels.csproj",
+        "packagesPath": "C:\\Users\\Stoyan\\.nuget\\packages\\",
+        "outputPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Web\\TimesheetManager.Web.ViewModels\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Stoyan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Data\\TimesheetManager.Data.Models\\TimesheetManager.Data.Models.csproj": {
+                "projectPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Data\\TimesheetManager.Data.Models\\TimesheetManager.Data.Models.csproj"
+              },
+              "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Services\\TimesheetManager.Services.Mapping\\TimesheetManager.Services.Mapping.csproj": {
+                "projectPath": "F:\\MyProjects\\TimesheetManager\\TimesheetManager\\TimesheetManager\\Services\\TimesheetManager.Services.Mapping\\TimesheetManager.Services.Mapping.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
