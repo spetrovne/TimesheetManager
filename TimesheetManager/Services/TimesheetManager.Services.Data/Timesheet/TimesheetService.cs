@@ -73,7 +73,11 @@
             await this.timesheets.AddAsync(timesheet);
             await this.timesheets.SaveChangesAsync();
 
+            await this.AddProductsToTimesheet(model.TimesheetProjects, model.StartDate, model.FinishDate);
 
+            // ToDo Add product tasks and hours...
+
+            return true;
         }
 
         private async Task<bool> ValidateProjects(ICollection<int> projectIds)
@@ -110,7 +114,7 @@
             return true;
         }
 
-        private async Task<Result> AddProductsToTimesheet(
+        private async Task AddProductsToTimesheet(
             ICollection<int> productIds,
             DateTime startDate,
             DateTime finishDate)
@@ -119,10 +123,15 @@
 
             foreach (var productId in productIds)
             {
-                var timesheetProduct= new TimesheetProject
-            }
+                var timesheetProduct = new TimesheetProject
+                {
+                    TimesheetId = timesheet.Id,
+                    ProjectId=productId,
+                };
 
-            return true;
+                await this.timesheerProjects.AddAsync(timesheetProduct);
+                await this.timesheerProjects.SaveChangesAsync();
+            }
         }
     }
 }
