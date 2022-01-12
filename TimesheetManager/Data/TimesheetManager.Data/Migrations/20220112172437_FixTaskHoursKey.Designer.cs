@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TimesheetManager.Data;
 
 namespace TimesheetManager.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220112172437_FixTaskHoursKey")]
+    partial class FixTaskHoursKey
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -459,44 +461,11 @@ namespace TimesheetManager.Data.Migrations
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Day")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<double>("FridayHours")
-                        .HasColumnType("float");
-
-                    b.Property<double>("Hours")
-                        .HasColumnType("float");
-
                     b.Property<int>("Id")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("datetime2");
-
-                    b.Property<double>("MondayHours")
-                        .HasColumnType("float");
-
-                    b.Property<string>("Notes")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<double>("SaturdayHours")
-                        .HasColumnType("float");
-
-                    b.Property<double>("SundayHours")
-                        .HasColumnType("float");
-
-                    b.Property<double>("ThursdayHours")
-                        .HasColumnType("float");
-
-                    b.Property<double>("TuesdayHours")
-                        .HasColumnType("float");
-
-                    b.Property<double>("WednesdayHours")
-                        .HasColumnType("float");
 
                     b.HasKey("TimesheetId", "ProjectTaskId");
 

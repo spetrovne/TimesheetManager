@@ -3,12 +3,11 @@
     using System;
     using System.Threading.Tasks;
 
+    using Microsoft.AspNetCore.Mvc;
     using TimesheetManager.Data.Common.Repositories;
     using TimesheetManager.Data.Models;
     using TimesheetManager.Services.Data;
     using TimesheetManager.Web.ViewModels.Settings;
-
-    using Microsoft.AspNetCore.Mvc;
 
     public class SettingsController : BaseController
     {

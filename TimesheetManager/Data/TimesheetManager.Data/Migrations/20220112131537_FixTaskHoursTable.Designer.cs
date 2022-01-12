@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TimesheetManager.Data;
 
 namespace TimesheetManager.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220112131537_FixTaskHoursTable")]
+    partial class FixTaskHoursTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -369,19 +371,20 @@ namespace TimesheetManager.Data.Migrations
                     b.Property<string>("Notes")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ProjectTaskId")
+                    b.Property<int>("TimesheetTaskId")
                         .HasColumnType("int");
 
-                    b.Property<int>("TimesheetId")
+                    b.Property<int>("TimesheetTaskProjectTaskId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TimesheetTaskTimesheetId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("IsDeleted");
 
-                    b.HasIndex("TimesheetId");
-
-                    b.HasIndex("ProjectTaskId", "TimesheetId");
+                    b.HasIndex("TimesheetTaskTimesheetId", "TimesheetTaskProjectTaskId");
 
                     b.ToTable("TaskHours");
                 });
@@ -459,44 +462,11 @@ namespace TimesheetManager.Data.Migrations
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Day")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<double>("FridayHours")
-                        .HasColumnType("float");
-
-                    b.Property<double>("Hours")
-                        .HasColumnType("float");
-
                     b.Property<int>("Id")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("datetime2");
-
-                    b.Property<double>("MondayHours")
-                        .HasColumnType("float");
-
-                    b.Property<string>("Notes")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<double>("SaturdayHours")
-                        .HasColumnType("float");
-
-                    b.Property<double>("SundayHours")
-                        .HasColumnType("float");
-
-                    b.Property<double>("ThursdayHours")
-                        .HasColumnType("float");
-
-                    b.Property<double>("TuesdayHours")
-                        .HasColumnType("float");
-
-                    b.Property<double>("WednesdayHours")
-                        .HasColumnType("float");
 
                     b.HasKey("TimesheetId", "ProjectTaskId");
 
@@ -569,27 +539,13 @@ namespace TimesheetManager.Data.Migrations
 
             modelBuilder.Entity("TimesheetManager.Data.Models.TaskHours", b =>
                 {
-                    b.HasOne("TimesheetManager.Data.Models.ProjectTask", "ProjectTask")
-                        .WithMany()
-                        .HasForeignKey("ProjectTaskId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("TimesheetManager.Data.Models.Timesheet", "Timesheet")
-                        .WithMany()
-                        .HasForeignKey("TimesheetId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("TimesheetManager.Data.Models.TimesheetTask", null)
+                    b.HasOne("TimesheetManager.Data.Models.TimesheetTask", "TimesheetTask")
                         .WithMany("TasksHours")
-                        .HasForeignKey("ProjectTaskId", "TimesheetId")
+                        .HasForeignKey("TimesheetTaskTimesheetId", "TimesheetTaskProjectTaskId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.Navigation("ProjectTask");
-
-                    b.Navigation("Timesheet");
+                    b.Navigation("TimesheetTask");
                 });
 
             modelBuilder.Entity("TimesheetManager.Data.Models.TimesheetProject", b =>

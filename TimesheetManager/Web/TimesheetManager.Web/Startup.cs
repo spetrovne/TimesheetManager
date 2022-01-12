@@ -18,7 +18,9 @@
     using TimesheetManager.Data.Seeding;
     using TimesheetManager.Services.Data;
     using TimesheetManager.Services.Data.Contracts.Project;
+    using TimesheetManager.Services.Data.Contracts.Timesheet;
     using TimesheetManager.Services.Data.Project;
+    using TimesheetManager.Services.Data.Timesheet;
     using TimesheetManager.Services.Mapping;
     using TimesheetManager.Services.Messaging;
     using TimesheetManager.Web.ViewModels;
@@ -69,6 +71,7 @@
             services.AddTransient<IEmailSender, NullMessageSender>();
             services.AddTransient<ISettingsService, SettingsService>();
             services.AddTransient<IProjectService, ProjectService>();
+            services.AddTransient<ITimesheetService, TimesheetService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

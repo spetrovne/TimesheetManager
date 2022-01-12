@@ -23,18 +23,26 @@
 
         public ICollection<TaskHours> TasksHours { get; set; }
 
-        //public double MondayHours { get; set; }
+        public DateTime Date { get; set; }
 
-        //public double TuesdayHours { get; set; }
+        public string Day { get; set; }
 
-        //public double WednesdayHours { get; set; }
+        public double Hours { get; set; }
 
-        //public double ThursdayHours { get; set; }
+        public string Notes { get; set; }
 
-        //public double FridayHours { get; set; }
+        public double MondayHours { get; set; }
 
-        //public double SaturdayHours { get; set; }
+        public double TuesdayHours { get; set; }
 
-        //public double SundayHours { get; set; }
+        public double WednesdayHours { get; set; }
+
+        public double ThursdayHours { get; set; }
+
+        public double FridayHours { get; set; }
+
+        public double SaturdayHours { get; set; }
+
+        public double SundayHours { get; set; }
     }
 }

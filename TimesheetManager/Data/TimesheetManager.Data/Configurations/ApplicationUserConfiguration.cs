@@ -1,8 +1,8 @@
 ﻿namespace TimesheetManager.Data.Configurations
 {
-    using TimesheetManager.Data.Models;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
+    using TimesheetManager.Data.Models;
 
     public class ApplicationUserConfiguration : IEntityTypeConfiguration<ApplicationUser>
     {

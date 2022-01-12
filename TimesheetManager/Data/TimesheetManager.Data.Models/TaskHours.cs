@@ -12,6 +12,10 @@
 
         public ProjectTask ProjectTask { get; set; }
 
+        public int TimesheetId { get; set; }
+
+        public Timesheet Timesheet { get; set; }
+
         public DateTime Date { get; set; }
 
         public string Day { get; set; }

@@ -2,9 +2,8 @@
 {
     using System.Diagnostics;
 
-    using TimesheetManager.Web.ViewModels;
-
     using Microsoft.AspNetCore.Mvc;
+    using TimesheetManager.Web.ViewModels;
 
     public class HomeController : BaseController
     {

@@ -84,6 +84,11 @@
                 .WithMany(t => t.TimesheetProjects)
                 .HasForeignKey(pt => pt.ProjectId);
 
+            builder.Entity<TimesheetTask>(b =>
+            {
+                b.HasMany(pa => pa.TasksHours).WithOne().HasForeignKey(pa => new { pa.ProjectTaskId, pa.TimesheetId });
+            });
+
             // Needed for Identity models configuration
             base.OnModelCreating(builder);
 

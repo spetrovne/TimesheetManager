@@ -5,6 +5,11 @@
     using System.IO;
     using System.Threading.Tasks;
 
+    using CommandLine;
+    using Microsoft.EntityFrameworkCore;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.Extensions.Logging;
     using TimesheetManager.Data;
     using TimesheetManager.Data.Common;
     using TimesheetManager.Data.Common.Repositories;
@@ -13,13 +18,6 @@
     using TimesheetManager.Data.Seeding;
     using TimesheetManager.Services.Data;
     using TimesheetManager.Services.Messaging;
-
-    using CommandLine;
-
-    using Microsoft.EntityFrameworkCore;
-    using Microsoft.Extensions.Configuration;
-    using Microsoft.Extensions.DependencyInjection;
-    using Microsoft.Extensions.Logging;
 
     public static class Program
     {

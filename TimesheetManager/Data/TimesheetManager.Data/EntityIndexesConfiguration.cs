@@ -2,9 +2,8 @@
 {
     using System.Linq;
 
-    using TimesheetManager.Data.Common.Models;
-
     using Microsoft.EntityFrameworkCore;
+    using TimesheetManager.Data.Common.Models;
 
     internal static class EntityIndexesConfiguration
     {

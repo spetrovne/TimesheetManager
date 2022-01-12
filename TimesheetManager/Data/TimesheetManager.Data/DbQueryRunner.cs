@@ -3,9 +3,8 @@
     using System;
     using System.Threading.Tasks;
 
-    using TimesheetManager.Data.Common;
-
     using Microsoft.EntityFrameworkCore;
+    using TimesheetManager.Data.Common;
 
     public class DbQueryRunner : IDbQueryRunner
     {
