@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Header from "./Shared/Navbar/Header";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Footer from "./Shared/Footer/Footer";
+import Layout from "./Shared/Layout/Layout";
+
+import { BrowserRouter, Route, Routes, Redirect } from "react-router-dom";
+import HomePage from "./Pages/Home/HomePage";
+import NotFound from "./Shared/NotFound/NotFound";
+import AddTimesheet from "./Pages/AddTimesheet/AddTimesheet";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route exact path="/" element={<HomePage />}></Route>
+          <Route exact path="/Home" element={<HomePage />}></Route>
+          <Route exact path="/Timesheet/New" element={<AddTimesheet />}></Route>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
   );
 }
 

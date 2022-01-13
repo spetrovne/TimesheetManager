@@ -1,0 +1,15 @@
+.timesheet-container {
+  margin-top: 2em;
+}
+
+.create-timesheet-header {
+  width: 100%;
+  margin-bottom: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timesheet-table {
+  min-height: 150px;
+}
