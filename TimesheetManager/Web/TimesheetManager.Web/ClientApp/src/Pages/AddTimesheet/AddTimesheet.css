@@ -17,3 +17,14 @@
 .hour-input {
   max-width: 60px;
 }
+/* 
+.form-control {
+  border: 0;
+  border-radius: 0;
+} */
+
+.bottom-end-align {
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+}

@@ -8,13 +8,20 @@ import TimesheetRow from "./TimesheetRow/TimesheetRow";
 const columns = [
   "Project",
   "Task",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-  "Sunday",
+  "Mon",
+  "Tue",
+  "Wed",
+  "Thur",
+  "Fri",
+  "Sat",
+  "Sun",
+  // "Monday",
+  // "Tuesday",
+  // "Wednesday",
+  // "Thursday",
+  // "Friday",
+  // "Saturday",
+  // "Sunday",
 ];
 
 const customStyles = {
@@ -66,10 +73,42 @@ function AddTimesheet() {
   return (
     <Container className="timesheet-container">
       <div className="create-timesheet-header">
-        <h1>Create Timesheet</h1>
+        {/* <h1>Create Timesheet</h1> */}
+      </div>
+      <div className="row">
+        <div class="card col-md-6">
+          <div class="card-body">
+            <h3 class="card-title">Week 01 -2022</h3>
+            <div class=" card-text mt-3">
+              <p>
+                <b>Start Date:</b> 02-11-2022
+              </p>
+
+              <div className="row">
+                <p className="col-md-6">
+                  <b>End Date:</b> 02-11-2022
+                </p>
+                <p className="col-md-6">
+                  <b>Stoyan Petrov</b>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class=" col-md-6 p-3">
+          <div className="row h-100 w-100 bottom-end-align">
+            <div className="col-sm-4 btn btn-primary mt-3 ">Save</div>
+            <div className="col-sm-1 "></div>
+            <div className="col-sm-4 btn btn-success mt-3">Submit</div>
+          </div>
+        </div>
       </div>
       <form>
-        <Table responsive className="timesheet-table table-striped table-sm">
+        <Table
+          responsive
+          className="timesheet-table table-striped table-sm mt-5"
+        >
           <thead>
             <tr>
               <th>#</th>
@@ -77,6 +116,7 @@ function AddTimesheet() {
                 <th key={index}>{columns[index]}</th>
               ))}
               <th>Total</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
