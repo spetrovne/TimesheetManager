@@ -11,5 +11,9 @@
 }
 
 .timesheet-table {
-  min-height: 150px;
+  /* min-height: 200px; */
+}
+
+.hour-input {
+  max-width: 60px;
 }

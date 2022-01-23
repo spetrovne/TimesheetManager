@@ -9,6 +9,7 @@ import { BrowserRouter, Route, Routes, Redirect } from "react-router-dom";
 import HomePage from "./Pages/Home/HomePage";
 import NotFound from "./Shared/NotFound/NotFound";
 import AddTimesheet from "./Pages/AddTimesheet/AddTimesheet";
+import SelectDate from "./Shared/Modals/SelectDate/SelectDate";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/Home" element={<HomePage />}></Route>
           <Route exact path="/Timesheet/New" element={<AddTimesheet />}></Route>
           <Route path="*" element={<NotFound />} />
+          <Route exact path="/Week" element={<SelectDate />} />
         </Routes>
       </Layout>
     </BrowserRouter>
