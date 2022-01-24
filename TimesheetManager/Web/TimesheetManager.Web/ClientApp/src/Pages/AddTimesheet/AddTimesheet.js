@@ -35,12 +35,6 @@ const customStyles = {
   }),
 };
 
-const options = [
-  { value: "chocolate", label: "Chocolate" },
-  { value: "strawberry", label: "Strawberry" },
-  { value: "vanilla", label: "Vanilla" },
-];
-
 const data = [
   ["Aurelia Vega", 30, "Deepends", "Spain", "Madrid"],
   ["Guerra Cortez", 45, "Insectus", "USA", "San Francisco"],
@@ -116,11 +110,31 @@ function AddTimesheet() {
 
   const handleSave = () => {
     if (handleValidation()) {
+      let timesheetProjects = [];
+      let timesheetTasks = timesheetRows.reduce((acc, row) => {
+        timesheetProjects.push(Number.parseInt(row.projectId));
+        let task = {
+          taskId: Number.parseInt(row.taskId),
+          mondayHours: row.mondayHours,
+          tuesdayHours: row.tuesdayHours,
+          wednesdayHours: row.wednesdayHours,
+          thursdayHours: row.thursdayHours,
+          fridayHours: row.fridayHours,
+          saturdayHours: row.saturdayHours,
+          sundayHours: row.sundayHours,
+        };
+        acc.push(task);
+        return acc;
+      }, []);
+
+      console.log(timesheetTasks);
+
       let timesheet = {
         name: week,
         startDate,
-        endDate,
-        timesheetRows,
+        finishDate: endDate,
+        timesheetTasks,
+        timesheetProjects,
       };
 
       console.log(timesheet);

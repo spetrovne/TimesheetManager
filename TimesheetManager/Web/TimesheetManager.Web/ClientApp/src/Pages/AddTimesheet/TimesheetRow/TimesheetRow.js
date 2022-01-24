@@ -11,6 +11,12 @@ const customStyles = {
   }),
 };
 
+const options = [
+  { value: 2, label: "Design the database" },
+  { value: 4, label: "CRUD for projects" },
+  { value: 5, label: "Setup FE" },
+];
+
 function TimesheetRow({ id, onChangeRow }) {
   const [projects, setPtojects] = useState([]);
   const [projectId, setProjectId] = useState(1);
@@ -58,12 +64,12 @@ function TimesheetRow({ id, onChangeRow }) {
 
   const onChangeProject = (e) => {
     setProjectId(e.target.value);
-    returnCurrentRowState("projectId", e.target.value);
+    returnCurrentRowState("projectId", Number.parseInt(e.target.value));
   };
 
   const onChangeTask = (e) => {
     setTaskId(e.target.value);
-    returnCurrentRowState("taskId", e.target.value);
+    returnCurrentRowState("taskId", Number.parseInt(e.target.value));
   };
 
   const onChangeMondayHours = (e) => {
@@ -139,7 +145,7 @@ function TimesheetRow({ id, onChangeRow }) {
             onChange={onChangeTask}
           >
             <option defaultValue hidden></option>
-            {projects.map((project, index) => (
+            {options.map((project, index) => (
               <option key={index} value={project.value}>
                 {project.label}
               </option>
