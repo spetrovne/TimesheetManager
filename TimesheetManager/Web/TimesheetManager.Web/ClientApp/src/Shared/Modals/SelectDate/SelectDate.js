@@ -2,11 +2,15 @@ import { useState, useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import moment from "moment";
 import { Container } from "react-bootstrap";
+import { Modal, Button } from "react-bootstrap";
 
-const SelectDate = () => {
+const SelectDate = ({ show, setShow, handleWeek, newTimesheet }) => {
   const [endDate, setEndDate] = useState("");
   const [startDate, setStartDate] = useState("");
   const [week, setWeek] = useState("");
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   const navigate = () => {
     return (
@@ -21,31 +25,44 @@ const SelectDate = () => {
       </Navigate>
     );
   };
-  const handleWeek = (e) => {
+
+  const handleWeekSelect = (e) => {
     setWeek(e.target.value);
     let getWeek = Number.parseInt(e.target.value.split("W")[1]);
     let endDate = moment().isoWeek(getWeek).format("yyyy-MM-DD");
     let startDate = moment(new Date(endDate)).add(-7, "d").format("yyyy-MM-DD");
     setStartDate(startDate);
     setEndDate(endDate);
+    handleWeek(e);
   };
+
+  const handleCrete = () => {
+    newTimesheet();
+    handleClose();
+  };
+  const handleCreate = () => {};
   return (
     <Container>
-      <div className="">
-        <div class="card text-center" style={{ width: "18rem" }}>
-          <div className="card-header bg-primary text-white">
-            <h5 class="card-title">Choose a week</h5>
-          </div>
-          <div class="card-body">
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header
+          className="bg-primary text-white"
+          closeButton
+          closeVariant="white"
+        >
+          <Modal.Title>Choose a week</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Container>
             <form>
               <div className="form-group">
                 <input
                   className="form-control"
                   type="week"
                   name="myWeek"
+                  value={week}
                   required
                   id="myWeek"
-                  onChange={handleWeek}
+                  onChange={handleWeekSelect}
                 />
               </div>
             </form>
@@ -61,12 +78,17 @@ const SelectDate = () => {
                 </p>
               )}
             </div>
-            <div class="btn btn-primary" onClick={navigate}>
-              Go somewhere
-            </div>
-          </div>
-        </div>
-      </div>
+          </Container>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleCrete}>
+            Create
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </Container>
   );
 };
