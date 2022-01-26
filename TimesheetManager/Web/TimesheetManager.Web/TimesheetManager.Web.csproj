@@ -4,6 +4,8 @@
     <TargetFramework>net5.0</TargetFramework>
     <UserSecretsId>aspnet-TimesheetManager-BBB373B5-EF3F-4DBB-B8AA-7152CEC275BF</UserSecretsId>
     <LangVersion>latest</LangVersion>
+    <SpaRoot>ClientApp\</SpaRoot>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -14,6 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices" Version="3.1.22" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="5.0.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.13">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -40,5 +44,9 @@
     <ProjectReference Include="..\..\Services\TimesheetManager.Services\TimesheetManager.Services.csproj" />
     <ProjectReference Include="..\TimesheetManager.Web.Infrastructure\TimesheetManager.Web.Infrastructure.csproj" />
     <ProjectReference Include="..\TimesheetManager.Web.ViewModels\TimesheetManager.Web.ViewModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\" />
   </ItemGroup>
 </Project>

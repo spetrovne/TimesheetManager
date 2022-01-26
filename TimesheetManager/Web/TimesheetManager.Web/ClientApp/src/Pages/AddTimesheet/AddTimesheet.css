@@ -1,0 +1,30 @@
+.timesheet-container {
+  margin-top: 2em;
+}
+
+.create-timesheet-header {
+  width: 100%;
+  margin-bottom: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timesheet-table {
+  /* min-height: 200px; */
+}
+
+.hour-input {
+  max-width: 60px;
+}
+/* 
+.form-control {
+  border: 0;
+  border-radius: 0;
+} */
+
+.bottom-end-align {
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+}
