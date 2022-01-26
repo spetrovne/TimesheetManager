@@ -24,6 +24,8 @@
             public const string SuccesfullyEdited = "Successfully edited.";
 
             public const string SuccesfullyDeleted = "Successfully removed";
+
+            public const string SuccesfullyRegistered = "Successfully registered.";
         }
     }
 }
