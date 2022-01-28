@@ -9,10 +9,18 @@
         public static class ControllerRoutes
         {
             public const string GetAllRoute = "getAll";
+
+            public const string RegisterRoute = "register";
+
+            public const string LoginRoute = "login";
         }
 
         public class ControllersResponseMessages
         {
+            public const string PasswordAndEmailCannotBeEmpty = "Password/Email cannot be empty";
+
+            public const string InvalidPasswordOrEmail = "Invalid Password/Email";
+
             public const string AlreadyExist = "This already exist.";
 
             public const string DoesNotExist = "This doesn't exist.";
@@ -26,6 +34,8 @@
             public const string SuccesfullyDeleted = "Successfully removed";
 
             public const string SuccesfullyRegistered = "Successfully registered.";
+
+            public const string SuccesfullyLoggedIn = "Successfully logged in.";
         }
     }
 }

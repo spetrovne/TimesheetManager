@@ -8,5 +8,7 @@
     public interface IUserService
     {
         Task<Result> RegisterAsync(RegisterViewModel model);
+
+        Task<Result> LoginAsync(LoginViewModel model);
     }
 }

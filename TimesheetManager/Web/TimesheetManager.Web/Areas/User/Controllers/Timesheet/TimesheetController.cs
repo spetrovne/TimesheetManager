@@ -9,7 +9,7 @@
     using TimesheetManager.Services.Data.Contracts.Timesheet;
     using TimesheetManager.Web.ViewModels.Timesheet;
 
-    using static Common.GlobalConstants.ControllersResponseMessages;
+    using static TimesheetManager.Common.GlobalConstants.ControllersResponseMessages;
 
     public class TimesheetController : TimesheetBaseController
     {

@@ -1,7 +1,9 @@
 ﻿namespace TimesheetManager.Web
 {
     using System.Reflection;
+    using System.Text;
 
+    using Microsoft.AspNetCore.Authentication.JwtBearer;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Http;
@@ -10,6 +12,7 @@
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
+    using Microsoft.IdentityModel.Tokens;
     using TimesheetManager.Data;
     using TimesheetManager.Data.Common;
     using TimesheetManager.Data.Common.Repositories;
@@ -19,11 +22,14 @@
     using TimesheetManager.Services.Data;
     using TimesheetManager.Services.Data.Contracts.Project;
     using TimesheetManager.Services.Data.Contracts.Timesheet;
+    using TimesheetManager.Services.Data.Contracts.User;
     using TimesheetManager.Services.Data.Project;
     using TimesheetManager.Services.Data.Timesheet;
+    using TimesheetManager.Services.Data.User;
     using TimesheetManager.Services.Mapping;
     using TimesheetManager.Services.Messaging;
     using TimesheetManager.Web.ViewModels;
+    using TimesheetManager.Web.ViewModels.User;
 
     public class Startup
     {
@@ -45,6 +51,21 @@
             services.AddDefaultIdentity<ApplicationUser>(IdentityOptionsProvider.GetIdentityOptions)
                 .AddRoles<ApplicationRole>().AddEntityFrameworkStores<ApplicationDbContext>();
 
+            services.Configure<JWTConfig>(this.configuration.GetSection("JWTConfig"));
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+            {
+                var key = Encoding.ASCII.GetBytes(this.configuration["JWTConfig:Key"]);
+                options.TokenValidationParameters = new TokenValidationParameters()
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
+                    RequireExpirationTime = true,
+                };
+            });
+
             services.Configure<CookiePolicyOptions>(
                 options =>
                     {
@@ -52,12 +73,12 @@
                         options.MinimumSameSitePolicy = SameSiteMode.None;
                     });
 
-            //services.AddControllersWithViews(
+            // services.AddControllersWithViews(
             //    options =>
             //        {
             //            options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
             //        }).AddRazorRuntimeCompilation();
-            //services.AddRazorPages();
+            // services.AddRazorPages();
             services.AddDatabaseDeveloperPageExceptionFilter();
 
             services.AddSingleton(this.configuration);
@@ -72,6 +93,7 @@
             services.AddTransient<ISettingsService, SettingsService>();
             services.AddTransient<IProjectService, ProjectService>();
             services.AddTransient<ITimesheetService, TimesheetService>();
+            services.AddTransient<IUserService, UserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
