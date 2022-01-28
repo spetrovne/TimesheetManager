@@ -13,6 +13,7 @@
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
     using Microsoft.IdentityModel.Tokens;
+    using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
     using TimesheetManager.Data;
     using TimesheetManager.Data.Common;
     using TimesheetManager.Data.Common.Repositories;
@@ -74,6 +75,13 @@
                     });
 
             // services.AddControllersWithViews(
+            services.AddSpaStaticFiles(configuration =>
+            {
+                configuration.RootPath = "ClientApp/build";
+            });
+
+
+            //services.AddControllersWithViews(
             //    options =>
             //        {
             //            options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
@@ -132,12 +140,23 @@
             .AllowAnyMethod());
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseSpaStaticFiles();
             app.UseCookiePolicy();
 
             app.UseRouting();
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+            app.UseSpa(spa =>
+            {
+                spa.Options.SourcePath = "ClientApp";
+
+                if (env.IsDevelopment())
+                {
+                    spa.UseReactDevelopmentServer(npmScript: "start");
+                }
+            });
 
             app.UseEndpoints(
                 endpoints =>
