@@ -4,9 +4,8 @@ namespace TimesheetManager.Data.Models
     using System;
     using System.Collections.Generic;
 
-    using TimesheetManager.Data.Common.Models;
-
     using Microsoft.AspNetCore.Identity;
+    using TimesheetManager.Data.Common.Models;
 
     public class ApplicationUser : IdentityUser, IAuditInfo, IDeletableEntity
     {
@@ -17,6 +16,8 @@ namespace TimesheetManager.Data.Models
             this.Claims = new HashSet<IdentityUserClaim<string>>();
             this.Logins = new HashSet<IdentityUserLogin<string>>();
         }
+
+        public string FullName { get; set; }
 
         // Audit info
         public DateTime CreatedOn { get; set; }
