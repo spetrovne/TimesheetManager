@@ -13,6 +13,8 @@
             public const string RegisterRoute = "register";
 
             public const string LoginRoute = "login";
+
+            public const string AddRoleRoute = "addRole";
         }
 
         public class ControllersResponseMessages
@@ -22,6 +24,8 @@
             public const string InvalidPasswordOrEmail = "Invalid Password/Email";
 
             public const string AlreadyExist = "This already exist.";
+
+            public const string RoleCannotBeEmpty = "{0} cannot be empty.";
 
             public const string DoesNotExist = "This doesn't exist.";
 

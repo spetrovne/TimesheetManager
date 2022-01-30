@@ -7,11 +7,12 @@
     using System.Threading.Tasks;
 
     using Microsoft.AspNetCore.Identity;
-
+    using Microsoft.EntityFrameworkCore;
     using TimesheetManager.Common;
     using TimesheetManager.Data.Common.Repositories;
     using TimesheetManager.Data.Models;
     using TimesheetManager.Services.Data.Contracts.User;
+    using TimesheetManager.Services.Mapping;
     using TimesheetManager.Web.ViewModels.User;
 
     using static TimesheetManager.Common.GlobalConstants.ControllersResponseMessages;
@@ -21,15 +22,58 @@
         private readonly UserManager<ApplicationUser> userManager;
         private readonly SignInManager<ApplicationUser> signInManager;
         private readonly IDeletableEntityRepository<ApplicationUser> users;
+        private readonly RoleManager<ApplicationRole> roleManager;
 
         public UserService(
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
-            IDeletableEntityRepository<ApplicationUser> users)
+            IDeletableEntityRepository<ApplicationUser> users,
+            RoleManager<ApplicationRole> roleManager)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
             this.users = users;
+            this.roleManager = roleManager;
+        }
+
+        public async Task<Result> AddRoleAsync(AddRoleViewModel model)
+        {
+            try
+            {
+                if (model.Role == null || model.Role == string.Empty)
+                {
+                    return string.Format(RoleCannotBeEmpty, "Role");
+                }
+
+                if (await this.roleManager.RoleExistsAsync(model.Role))
+                {
+                    return AlreadyExist;
+                }
+
+                var role = new ApplicationRole
+                {
+                    Name = model.Role,
+                };
+
+                var result = await this.roleManager.CreateAsync(role);
+
+                if (!result.Succeeded)
+                {
+                    return string.Join(", ", result.Errors.Select(x => x.Description));
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+        public async Task<TModel> GetUserAsync<TModel>(string email)
+        {
+            var appUser = await this.users.AllAsNoTracking().Where(u => u.Email == email).To<TModel>().FirstOrDefaultAsync();
+            return appUser;
         }
 
         public async Task<Result> LoginAsync(LoginViewModel model)
@@ -67,6 +111,8 @@
 
                 if (result.Succeeded)
                 {
+                    var tempUser = await this.userManager.FindByEmailAsync(model.Email);
+                    await this.userManager.AddToRoleAsync(tempUser, "Employee");
                     return true;
                 }
 
@@ -76,12 +122,6 @@
             {
                 return string.Join(", ", ex.Message);
             }
-
-//{
-//  "fullName": "Stoyan Petrov",
-//  "email": "stoyanpetrovne@gmail.com",
-//  "password": "12345"
-//}
         }
     }
 }

@@ -4,9 +4,11 @@
     using System.Collections.Generic;
     using System.IdentityModel.Tokens.Jwt;
     using System.Linq;
+    using System.Security.Claims;
     using System.Text;
     using System.Threading.Tasks;
 
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Options;
@@ -62,12 +64,14 @@
                     }
 
                     var appUser = await this.userManager.FindByEmailAsync(model.Email);
+                    var role = this.userManager.GetRolesAsync(appUser).GetAwaiter().GetResult().FirstOrDefault().ToString();
                     var user = new UserViewModel
                     {
                         Email = appUser.Email,
                         FullName = appUser.FullName,
-                        Token = this.GenerateToken(appUser),
+                        Token = this.GenerateToken(appUser, role),
                         DateCreated = appUser.CreatedOn,
+                        Role = role,
                     };
 
                     return this.Ok(user);
@@ -81,7 +85,22 @@
             }
         }
 
-        private string GenerateToken(ApplicationUser user)
+        [Authorize(Roles = "Administrator")]
+        [HttpPost]
+        [Route(AddRoleRoute)]
+        public async Task<IActionResult> AddRole(AddRoleViewModel model)
+        {
+            var result = await this.userService.AddRoleAsync(model);
+
+            if (result.Failure)
+            {
+                return this.BadRequest(result.Error);
+            }
+
+            return this.Ok(SuccesfullyCreated);
+        }
+
+        private string GenerateToken(ApplicationUser user, string role)
         {
             var jwtTokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(this.jwtConfig.Key);
@@ -92,6 +111,7 @@
                     new System.Security.Claims.Claim(JwtRegisteredClaimNames.NameId, user.Id),
                     new System.Security.Claims.Claim(JwtRegisteredClaimNames.Email, user.Email),
                     new System.Security.Claims.Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                    new System.Security.Claims.Claim(ClaimTypes.Role, role),
                 }),
                 Expires = DateTime.UtcNow.AddHours(12),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),

@@ -10,5 +10,9 @@
         Task<Result> RegisterAsync(RegisterViewModel model);
 
         Task<Result> LoginAsync(LoginViewModel model);
+
+        Task<Result> AddRoleAsync(AddRoleViewModel model);
+
+        Task<TModel> GetUserAsync<TModel>(string email);
     }
 }

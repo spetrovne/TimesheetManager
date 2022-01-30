@@ -8,12 +8,13 @@
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
+    using Microsoft.Extensions.Options;
     using Microsoft.IdentityModel.Tokens;
-    using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
     using TimesheetManager.Data;
     using TimesheetManager.Data.Common;
     using TimesheetManager.Data.Common.Repositories;
@@ -54,7 +55,11 @@
 
             services.Configure<JWTConfig>(this.configuration.GetSection("JWTConfig"));
 
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+            services.AddAuthentication(x =>
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>
             {
                 var key = Encoding.ASCII.GetBytes(this.configuration["JWTConfig:Key"]);
                 options.TokenValidationParameters = new TokenValidationParameters()
@@ -80,8 +85,7 @@
                 configuration.RootPath = "ClientApp/build";
             });
 
-
-            //services.AddControllersWithViews(
+            // services.AddControllersWithViews(
             //    options =>
             //        {
             //            options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
@@ -122,11 +126,9 @@
                 app.UseDeveloperExceptionPage();
                 app.UseMigrationsEndPoint();
             }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-                app.UseHsts();
-            }
+
+            app.UseStaticFiles();
+            app.UseSpaStaticFiles();
 
             if (env.IsDevelopment())
             {
@@ -134,19 +136,22 @@
                 app.UseSwaggerUI();
             }
 
+            app.UseRouting();
             app.UseCors(options => options
             .AllowAnyOrigin()
             .AllowAnyHeader()
             .AllowAnyMethod());
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
-            app.UseSpaStaticFiles();
             app.UseCookiePolicy();
-
-            app.UseRouting();
-
             app.UseAuthentication();
             app.UseAuthorization();
+            app.UseEndpoints(
+                endpoints =>
+                {
+                    endpoints.MapControllerRoute(
+                        name: "default",
+                        pattern: "{controller}/{action=Index}/{id?}");
+                });
 
             app.UseSpa(spa =>
             {
@@ -157,14 +162,6 @@
                     spa.UseReactDevelopmentServer(npmScript: "start");
                 }
             });
-
-            app.UseEndpoints(
-                endpoints =>
-                    {
-                        endpoints.MapControllerRoute("areaRoute", "{area:exists}/{controller=Home}/{action=Index}/{id?}");
-                        endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
-                        endpoints.MapRazorPages();
-                    });
         }
     }
 }

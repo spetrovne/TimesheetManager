@@ -5,7 +5,7 @@
     using Microsoft.AspNetCore.Mvc;
 
     [ApiController]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [Authorize(Roles = "Employee")]
     [Area("User")]
     [Route("[controller]")]
     public class TimesheetBaseController : ControllerBase
