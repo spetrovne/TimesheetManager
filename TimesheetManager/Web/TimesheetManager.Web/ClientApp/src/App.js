@@ -10,6 +10,8 @@ import HomePage from "./Pages/Home/HomePage";
 import NotFound from "./Shared/NotFound/NotFound";
 import AddTimesheet from "./Pages/AddTimesheet/AddTimesheet";
 import SelectDate from "./Shared/Modals/SelectDate/SelectDate";
+import Login from "./Pages/Login/Login";
+import Register from "./Pages/Register/Register";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
       <Layout>
         <Routes>
           <Route exact path="/" element={<HomePage />}></Route>
+          <Route exact path="/login" element={<Login />}></Route>
+          <Route exact path="/register" element={<Register />}></Route>
           <Route exact path="/Home" element={<HomePage />}></Route>
           <Route exact path="/Timesheet/New" element={<AddTimesheet />}></Route>
           <Route path="*" element={<NotFound />} />
