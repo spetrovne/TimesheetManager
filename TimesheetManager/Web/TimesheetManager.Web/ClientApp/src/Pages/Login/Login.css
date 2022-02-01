@@ -1,0 +1,16 @@
+.login-container {
+  background-image: url("../../assets/amazon-virtual-customer-service-work-remote-wht.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.register-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

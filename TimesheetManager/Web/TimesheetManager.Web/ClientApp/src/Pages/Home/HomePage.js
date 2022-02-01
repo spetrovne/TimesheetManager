@@ -1,10 +1,13 @@
 import { Container } from "react-bootstrap";
+import workHours from "../../assets/pngegg.png";
+import "./Home.css";
+import BaseSection from "./BaseSection/BaseSection";
 
 const HomePage = () => {
   return (
-    <Container className="container">
-      <h1>Home Page</h1>
-    </Container>
+    <div className="home-container">
+      <BaseSection></BaseSection>
+    </div>
   );
 };
 

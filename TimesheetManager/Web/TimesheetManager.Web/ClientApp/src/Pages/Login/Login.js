@@ -1,11 +1,12 @@
 import React, { useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Navigate } from "react-router-dom";
+import { Navigate, Link } from "react-router-dom";
 
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
-
+import backGroundImage from "../../assets/amazon-virtual-customer-service-work-remote-wht.jpg";
+import "./Login.css";
 import { login } from "../../actions/auth";
 
 const required = (value) => {
@@ -63,7 +64,7 @@ const Login = (props) => {
   }
 
   return (
-    <div className="col-md-12">
+    <div className="login-container">
       <div className="card card-container">
         <img
           src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
@@ -96,15 +97,17 @@ const Login = (props) => {
             />
           </div>
 
-          <div className="form-group">
-            <button className="btn btn-primary btn-block" disabled={loading}>
+          <div className="d-flex form-group justify-content-center">
+            <button
+              className="btn btn-primary my-2 btn-block"
+              disabled={loading}
+            >
               {loading && (
                 <span className="spinner-border spinner-border-sm"></span>
               )}
               <span>Login</span>
             </button>
           </div>
-
           {message && (
             <div className="form-group">
               <div className="text-danger" role="alert">
@@ -114,6 +117,12 @@ const Login = (props) => {
           )}
           <CheckButton style={{ display: "none" }} ref={checkBtn} />
         </Form>
+        <div className="register-section">
+          <span>Don't have an account?</span>
+          <Link className="no-decoration" to="/Register">
+            Register
+          </Link>
+        </div>
       </div>
     </div>
   );

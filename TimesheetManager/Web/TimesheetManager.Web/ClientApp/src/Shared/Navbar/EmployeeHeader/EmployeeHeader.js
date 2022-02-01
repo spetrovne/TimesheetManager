@@ -1,11 +1,11 @@
 import React from "react";
 import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import "./Header.css";
+import "../Header.css";
 
-const Header = () => {
+const EmployeeHeader = ({ logout, user }) => {
   return (
-    <Navbar sticky="top" bg="light" expand="lg">
+    <Navbar fixed bg="light" expand="lg">
       <Container>
         <Navbar.Brand>
           <Link className="text-dark no-decoration" to="/Home">
@@ -13,12 +13,12 @@ const Header = () => {
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Collapse id="basic-navbar-nav justify-content-end">
           <Nav active={true} className="me-auto">
-            <Nav.Link className="d-flex" as={Link} to="/Home">
+            <Nav.Link as={Link} to="/Home">
               Home
             </Nav.Link>
-            {/* <NavDropdown title="Timesheet" id="basic-nav-dropdown">
+            <NavDropdown title="Timesheet" id="basic-nav-dropdown">
               <NavDropdown.Item as={Link} to="/Timesheet/New">
                 New
               </NavDropdown.Item>
@@ -32,17 +32,20 @@ const Header = () => {
               <NavDropdown.Item href="#action/3.4">
                 Separated link
               </NavDropdown.Item>
-            </NavDropdown> */}
+            </NavDropdown>
           </Nav>
-          <div className="d-flex">
-            <Link className="text-dark no-decoration" to="/Login">
-              Login
-            </Link>
-          </div>
+          <Nav className="d-flex justify-content-end">
+            <Nav.Link className="text-dark" as={Link} to="/Profile">
+              {user.fullName}
+            </Nav.Link>
+            <Nav.Link as={Link} to="/Login" onClick={() => logout()}>
+              Logout
+            </Nav.Link>
+          </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 };
 
-export default Header;
+export default EmployeeHeader;
