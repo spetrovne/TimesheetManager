@@ -16,5 +16,7 @@
         Task<Result> UpdateAsync(UpdateProjectViewModel model);
 
         Task<Result> RemoveAsync(int id);
+
+        Task<bool> ValidateProject(int id);
     }
 }

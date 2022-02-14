@@ -85,7 +85,7 @@
             }
         }
 
-        [Authorize(Roles = "Administrator")]
+        //[Authorize(Roles = "Administrator")]
         [HttpPost]
         [Route(AddRoleRoute)]
         public async Task<IActionResult> AddRole(AddRoleViewModel model)

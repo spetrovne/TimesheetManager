@@ -8,17 +8,19 @@
 
     public class ProjectTask : BaseDeletableModel<int>
     {
-        public ProjectTask()
-        {
-            this.TimesheetTasks = new HashSet<TimesheetTask>();
-        }
+        //public ProjectTask()
+        //{
+        //    this.TimesheetTasks = new HashSet<TimesheetTask>();
+        //}
 
         public string Name { get; set; }
 
-        public int ProjectId { get; set; }
+        public virtual ICollection<Timesheet> Timesheets { get; set; }
 
-        public Project Project { get; set; }
+        //public int ProjectId { get; set; }
 
-        public ICollection<TimesheetTask> TimesheetTasks { get; set; }
+        //public Project Project { get; set; }
+
+        //public ICollection<TimesheetTask> TimesheetTasks { get; set; }
     }
 }

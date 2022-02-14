@@ -8,22 +8,30 @@
 
     public class Timesheet : BaseDeletableModel<int>
     {
-        public Timesheet()
-        {
-            this.TimesheetTasks = new HashSet<TimesheetTask>();
-            this.TimesheetProjects = new HashSet<TimesheetProject>();
-        }
+        //public Timesheet()
+        //{
+        //    this.TimesheetTasks = new HashSet<TimesheetTask>();
+        //    this.TimesheetProjects = new HashSet<TimesheetProject>();
+        //}
 
-        public string Name { get; set; }
+        public Status Status { get; set; }
 
-        public DateTime StartDate { get; set; }
+        public int ProjectId { get; set; }
 
-        public DateTime FinishDate { get; set; }
+        public virtual Project Project { get; set; }
 
-        public bool IsSubmitted { get; set; }
+        public int TaskId { get; set; }
 
-        public ICollection<TimesheetTask> TimesheetTasks { get; set; }
+        public virtual ProjectTask ProjectTask { get; set; }
 
-        public ICollection<TimesheetProject> TimesheetProjects { get; set; }
+        public Week Week { get; set; }
+
+        public string ApplicationUserId { get; set; }
+
+        public ApplicationUser ApplicationUser { get; set; }
+
+        //public ICollection<TimesheetTask> TimesheetTasks { get; set; }
+
+        //public ICollection<TimesheetProject> TimesheetProjects { get; set; }
     }
 }

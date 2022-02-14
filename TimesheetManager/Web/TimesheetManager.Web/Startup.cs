@@ -23,11 +23,15 @@
     using TimesheetManager.Data.Seeding;
     using TimesheetManager.Services.Data;
     using TimesheetManager.Services.Data.Contracts.Project;
+    using TimesheetManager.Services.Data.Contracts.Task;
     using TimesheetManager.Services.Data.Contracts.Timesheet;
     using TimesheetManager.Services.Data.Contracts.User;
+    using TimesheetManager.Services.Data.Contracts.Week;
     using TimesheetManager.Services.Data.Project;
+    using TimesheetManager.Services.Data.Task;
     using TimesheetManager.Services.Data.Timesheet;
     using TimesheetManager.Services.Data.User;
+    using TimesheetManager.Services.Data.Week;
     using TimesheetManager.Services.Mapping;
     using TimesheetManager.Services.Messaging;
     using TimesheetManager.Web.ViewModels;
@@ -104,6 +108,8 @@
             services.AddTransient<IEmailSender, NullMessageSender>();
             services.AddTransient<ISettingsService, SettingsService>();
             services.AddTransient<IProjectService, ProjectService>();
+            services.AddTransient<ITaskService, TaskService>();
+            services.AddTransient<IWeekService, WeekService>();
             services.AddTransient<ITimesheetService, TimesheetService>();
             services.AddTransient<IUserService, UserService>();
         }

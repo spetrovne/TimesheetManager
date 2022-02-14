@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
 
@@ -72,6 +73,18 @@
 
             project.Name = model.Name;
             await this.projects.SaveChangesAsync();
+
+            return true;
+        }
+
+        public async Task<bool> ValidateProject(int id)
+        {
+            var project = await this.projects.AllAsNoTracking().Where(p => p.Id == id).FirstOrDefaultAsync();
+
+            if (project == null)
+            {
+                return false;
+            }
 
             return true;
         }

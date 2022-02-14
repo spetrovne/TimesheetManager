@@ -31,11 +31,13 @@
 
         public DbSet<Timesheet> Timesheets { get; set; }
 
-        public DbSet<TimesheetProject> TimesheetProjects { get; set; }
+        public DbSet<Week> Weeks { get; set; }
 
-        public DbSet<TimesheetTask> TimesheetTasks { get; set; }
+        //public DbSet<TimesheetProject> TimesheetProjects { get; set; }
 
-        public DbSet<TaskHours> TaskHours { get; set; }
+        //public DbSet<TimesheetTask> TimesheetTasks { get; set; }
+
+        //public DbSet<TaskHours> TaskHours { get; set; }
 
         public override int SaveChanges() => this.SaveChanges(true);
 
@@ -58,36 +60,39 @@
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<TimesheetTask>()
-                .HasKey(t => new { t.TimesheetId, t.ProjectTaskId });
+            builder.Entity<Timesheet>()
+                .Property(b => b.Status)
+                .HasConversion(s => s.ToString(), s => Enum.Parse<Status>(s));
+            //builder.Entity<TimesheetTask>()
+            //    .HasKey(t => new { t.TimesheetId, t.ProjectTaskId });
 
-            builder.Entity<TimesheetTask>()
-                .HasOne(pt => pt.Timesheet)
-                .WithMany(p => p.TimesheetTasks)
-                .HasForeignKey(pt => pt.TimesheetId);
+            //builder.Entity<TimesheetTask>()
+            //    .HasOne(pt => pt.Timesheet)
+            //    .WithMany(p => p.TimesheetTasks)
+            //    .HasForeignKey(pt => pt.TimesheetId);
 
-            builder.Entity<TimesheetTask>()
-                .HasOne(pt => pt.ProjectTask)
-                .WithMany(t => t.TimesheetTasks)
-                .HasForeignKey(pt => pt.ProjectTaskId);
+            //builder.Entity<TimesheetTask>()
+            //    .HasOne(pt => pt.ProjectTask)
+            //    .WithMany(t => t.TimesheetTasks)
+            //    .HasForeignKey(pt => pt.ProjectTaskId);
 
-            builder.Entity<TimesheetProject>()
-                .HasKey(t => new { t.TimesheetId, t.ProjectId });
+            //builder.Entity<TimesheetProject>()
+            //    .HasKey(t => new { t.TimesheetId, t.ProjectId });
 
-            builder.Entity<TimesheetProject>()
-                .HasOne(pt => pt.Timesheet)
-                .WithMany(p => p.TimesheetProjects)
-                .HasForeignKey(pt => pt.TimesheetId);
+            //builder.Entity<TimesheetProject>()
+            //    .HasOne(pt => pt.Timesheet)
+            //    .WithMany(p => p.TimesheetProjects)
+            //    .HasForeignKey(pt => pt.TimesheetId);
 
-            builder.Entity<TimesheetProject>()
-                .HasOne(pt => pt.Project)
-                .WithMany(t => t.TimesheetProjects)
-                .HasForeignKey(pt => pt.ProjectId);
+            //builder.Entity<TimesheetProject>()
+            //    .HasOne(pt => pt.Project)
+            //    .WithMany(t => t.TimesheetProjects)
+            //    .HasForeignKey(pt => pt.ProjectId);
 
-            builder.Entity<TimesheetTask>(b =>
-            {
-                b.HasMany(pa => pa.TasksHours).WithOne().HasForeignKey(pa => new { pa.ProjectTaskId, pa.TimesheetId });
-            });
+            //builder.Entity<TimesheetTask>(b =>
+            //{
+            //    b.HasMany(pa => pa.TasksHours).WithOne().HasForeignKey(pa => new { pa.ProjectTaskId, pa.TimesheetId });
+            //});
 
             // Needed for Identity models configuration
             base.OnModelCreating(builder);
